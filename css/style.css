@@ -47,6 +47,10 @@ img {
   max-width: 100%;
 }
 
+strong {
+  font-weight: bold;
+}
+
 /* Typography */
 h1,
 h2,
@@ -63,4 +67,27 @@ h2 {
 }
 h3 {
   font-size: var(--fs-h3);
+}
+
+.section-title {
+  margin-bottom: 0.25em;
+}
+
+.section-title__intro {
+  font-weight: var(--fw-reg);
+}
+
+.section-title__intro strong {
+  display: block;
+}
+
+.section-subtitles {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section-subtitles__intro,
+.section-subtitles__about {
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
 }
