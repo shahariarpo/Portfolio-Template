@@ -287,12 +287,10 @@ nav {
 }
 
 .portfolio__item {
-  background-color: var(--clr-accent);
   object-fit: cover;
   object-position: center;
   height: 240px;
   width: 240px;
-  overflow: hidden;
 }
 
 .portfolio__img {
@@ -302,5 +300,4 @@ nav {
 
 .portfolio__img:hover {
   transform: scale(1.2);
-  opacity: 0.85;
 }
