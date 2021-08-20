@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Custom properties */
@@ -43,6 +45,7 @@ body {
   margin: 0;
   font-family: var(--ff-primary);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 section {
@@ -122,6 +125,14 @@ h3 {
   padding: 0.25em;
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
+}
+
+.section-subtitles__work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+  margin: 0;
+  font-size: var(--fs-h3);
 }
 
 /* header */
@@ -255,4 +266,41 @@ nav {
     position: relative;
     z-index: 2;
   }
+}
+
+/* My work */
+
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.portfolio {
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  row-gap: 3em;
+}
+
+.portfolio__item {
+  background-color: var(--clr-accent);
+  object-fit: cover;
+  object-position: center;
+  height: 240px;
+  width: 240px;
+  overflow: hidden;
+}
+
+.portfolio__img {
+  max-width: 100%;
+  transition: transform 400ms;
+}
+
+.portfolio__img:hover {
+  transform: scale(1.2);
+  opacity: 0.85;
 }
