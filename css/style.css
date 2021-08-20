@@ -58,6 +58,29 @@ strong {
   font-weight: bold;
 }
 
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.125);
+}
+
 /* Typography */
 h1,
 h2,
@@ -145,5 +168,53 @@ nav {
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em);
+  }
+}
+
+/* My sercvice section */
+
+.my-services {
+  background-color: var(--clr-dark);
+  background-image: url(/Images/bg.png);
+  color: var(--clr-light);
+  background-size: cover;
+  background-blend-mode: overlay;
+  text-align: center;
+}
+
+.section-title__services {
+  color: var(--clr-accent);
+  position: relative;
+}
+
+.section-title__services::after {
+  content: "";
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.services {
+  margin-bottom: 4em;
+}
+
+.service {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service + .service {
+    margin-left: 2em;
   }
 }
