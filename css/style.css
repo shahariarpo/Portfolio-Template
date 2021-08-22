@@ -66,6 +66,10 @@ strong {
   outline-offset: 3px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Buttons */
 
 .btn {
@@ -195,10 +199,6 @@ h3 {
 }
 
 .hamburger {
-  background-color: var(--clr-dark);
-  width: 2em;
-  height: 3px;
-  border-radius: 1em;
   display: block;
   position: relative;
 }
@@ -206,7 +206,7 @@ h3 {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background-color: var(--clr-dark);
+  background-color: var(--clr-accent);
   width: 2em;
   height: 3px;
   border-radius: 1em;
@@ -227,6 +227,26 @@ h3 {
 
 .hamburger::after {
   bottom: 6px;
+}
+
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
 }
 
 /* intro */
